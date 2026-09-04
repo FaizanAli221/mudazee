@@ -336,13 +336,26 @@ export default function HomePage({
                   </p>
                 </div>
 
+                <div className="text-[11px] text-[#7A7264] space-y-0.5 pt-1">
+                  <p><span className="font-semibold text-[#141311]">Mobile:</span> {store.phone}</p>
+                  <p><span className="font-semibold text-[#141311]">PTCL:</span> {store.landline}</p>
+                </div>
+
                 <div className="pt-3 border-t border-[#F2ECE0] flex items-center justify-between">
                   <a
-                    href="tel:03179145228"
+                    href={`tel:${store.phone.replace(/\s+/g, "")}`}
                     className="text-[11px] font-bold text-[#141311] hover:text-[#A9803D] flex items-center gap-1"
                   >
                     <Phone size={12} className="text-[#A9803D]" />
-                    <span>0317 9145228</span>
+                    <span>Call Branch</span>
+                  </a>
+                  <a
+                    href={`https://wa.me/${store.whatsapp}?text=Hello%20MUDAZEE%20${encodeURIComponent(store.area)}%20Branch`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[11px] text-[#1E9A4B] hover:underline flex items-center gap-1 font-semibold"
+                  >
+                    <span>WhatsApp</span>
                   </a>
                   <a
                     href={store.mapUrl}
@@ -350,8 +363,8 @@ export default function HomePage({
                     rel="noreferrer"
                     className="text-[11px] text-[#A9803D] hover:text-[#141311] flex items-center gap-1 font-semibold"
                   >
-                    <span>Directions</span>
-                    <ExternalLink size={12} />
+                    <span>Maps</span>
+                    <ExternalLink size={11} />
                   </a>
                 </div>
               </div>
