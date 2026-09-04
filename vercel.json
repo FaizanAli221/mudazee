@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm --prefix mudazee-frontend install",
   "buildCommand": "npm --prefix mudazee-frontend run build",
   "outputDirectory": "mudazee-frontend/dist",
   "framework": "vite",
