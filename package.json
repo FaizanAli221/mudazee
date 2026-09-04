@@ -1,0 +1,16 @@
+{
+  "name": "mudazee-workspace",
+  "version": "1.0.0",
+  "description": "MUDAZEE Luxury Perfumes — Fullstack Workspace",
+  "scripts": {
+    "build": "npm --prefix mudazee-frontend run build",
+    "dev": "npm run dev:frontend",
+    "dev:backend": "npm --prefix mudazee-backend run dev",
+    "dev:frontend": "npm --prefix mudazee-frontend run dev",
+    "build:backend": "npm --prefix mudazee-backend run build",
+    "build:frontend": "npm --prefix mudazee-frontend run build",
+    "install:backend": "npm --prefix mudazee-backend install",
+    "install:frontend": "npm --prefix mudazee-frontend install",
+    "install:all": "npm run install:backend && npm run install:frontend"
+  }
+}
